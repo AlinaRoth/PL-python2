@@ -29,8 +29,6 @@ fs.open("access.log", "r", 0644, function(err, file_handle)
 		var pageIps = log.match(/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ig);
         IPs = getOnly(pageIps);
         
-		//web=ip[0].split(re);
-		//console.log('podset:',web[1]);
 		for(i=0; i<IPs.length; i++) {
             var subnet = IPs[i].split('.')[0] + "."
             + IPs[i].split('.')[1]+"."+IPs[i].split('.')[2];
